@@ -1,0 +1,20 @@
+Matthew Beazley
+11/25/2016
+
+Images:
+character.png is a modified version of red from Pokemon Red and Blue.
+I created pokeball.png, Test.png, Map.png, and FullSky.png.
+
+Important notes:
+
+1. There are no errors that I know of.  However, there seems to be a wierd warning that was coming up from time to time about compilation times not being in sync or something.  I only saw this briefly, but from what I researched on it, it's most likely due to a clock desyncronization caused when using a remote connection, which I used during this project, as I ssh-ed to the lab machines.
+
+2. The amount of memory leakage is solely from the SDL library.
+
+3. The player throws pokeballs to destroy the randomly placed sprites.  The player itself will not be destroyed when it contacts said sprites, but I have included a suicide capability for the player to show off the explosionSprite for the player.
+
+4. Hud shows number of Pokeballs players has remaining, the score the player has earned, the number pokeballs actively being thrown, the number of pokeballs in the freelist, and the basic controls for the user.
+
+5. I was unable to find how to get the clock to reset on key-prompt, so while everything else resets when r is pressed, the time does not.
+
+

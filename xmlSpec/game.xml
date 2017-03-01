@@ -1,0 +1,110 @@
+<?xml version = "1.0"?>
+<GameData>
+<!-- screenTitle is also used to identify you and your animation. 
+     So make sure to include your name as part of the screenTitle -->
+<screenTitle>Matt Beazley</screenTitle>
+<maxStringSize>50</maxStringSize>
+
+<frameCap>60</frameCap>
+<framesAreCapped>false</framesAreCapped>
+
+<frameMax>1000</frameMax>
+<username>mbeazle</username>
+
+<PokemonNum>3</PokemonNum>
+
+<!-- Determines number of frames run before new FPS is calculated-->
+<fpsNum>200</fpsNum>
+
+<view>
+  <width>480</width>
+  <height>480</height>
+</view>
+
+<world>
+  <width>960</width>
+  <height>960</height>
+</world>
+
+<tile>
+  <size>32</size>
+</tile>
+
+<back1>
+  <file>images/FullSky.png</file>
+  <red>100</red>
+  <green>100</green>
+  <blue>205</blue>
+  <factor>0.5</factor>
+  <transparency>false</transparency>
+</back1>
+
+<back2>
+  <file>images/Map.png</file>
+  <red>100</red>
+  <green>200</green>
+  <blue>100</blue>
+  <factor>1</factor>
+  <transparency>false</transparency>
+</back2>  
+
+<font name="font">
+  <file>font/dyslexic-bold.otf</file>
+  <size>16</size>
+  <red>0</red>
+  <green>0</green>
+  <blue>0</blue>
+  <unused>0</unused>
+</font>
+
+<ball>
+  <file>images/ball.png</file>
+  <startLoc x="0" y="0" />
+  <frames>1</frames>
+  <frameInterval>0</frameInterval>
+  <speedX>0</speedX>
+  <speedY>0</speedY>
+  <transparency>true</transparency>
+  <chunk>
+   <size>10</size>
+   <distance>50</distance>
+  </chunk>
+</ball>
+
+<temp>
+  <file>images/Test.png</file>
+  <startLoc x="160" y="160" />
+  <frames>1</frames>
+  <frameInterval>0</frameInterval>
+  <speedX>0</speedX>
+  <speedY>0</speedY>
+  <transparency>true</transparency>
+  <chunk>
+   <size>10</size>
+   <distance>50</distance>
+  </chunk>
+  <power>5</power>
+  <flee>64</flee>
+</temp>
+
+<character>
+  <file>images/Character.png</file>
+  <startLoc x="320" y="160"/>
+  <frames>16</frames>
+  <speedX>0</speedX>
+  <speedY>0</speedY>
+  <frameInterval>100</frameInterval>
+  <transparency>true</transparency>
+  <chunk>
+   <size>10</size>
+   <distance>50</distance>
+  </chunk>
+  <pokeballs>99</pokeballs>
+  <downFrame>1</downFrame>
+  <upFrame>13</upFrame>
+  <leftFrame>5</leftFrame>
+  <rightFrame>9</rightFrame>
+  <FramesperDirection>4</FramesperDirection>
+</character>
+
+</GameData>

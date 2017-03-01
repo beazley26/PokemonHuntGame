@@ -1,0 +1,50 @@
+#ifndef SPRITE__H
+#define SPRITE__H
+#include <string>
+#include <vector>
+#include "drawable.h"
+
+class ExplodingSprite;
+class Sprite : public Drawable {
+public:
+  Sprite(const std::string&);
+  Sprite(const std::string&, const Vector2f& pos, const Vector2f& vel);
+  Sprite(const std::string&, 
+         const Vector2f& pos, const Vector2f& vel, Frame* f);
+  Sprite(const std::string&, 
+         const Vector2f& pos, const Vector2f& vel, std::vector<Frame *> f);
+  Sprite(const Sprite& s);
+  virtual ~Sprite() { } 
+
+  virtual const Frame* getFrame() const { return frames[currentFrame]; }
+  virtual void draw() const;
+
+  virtual void update(Uint32 ticks);
+
+  Sprite&operator=(const Sprite& s);
+  void explode();
+  void moveUp();
+  void moveDown();
+  void moveLeft();
+  void moveRight();
+  void randomMove();
+  void stop();
+
+protected:
+  ExplodingSprite* explosion;
+  std::vector<Frame *> frames;
+  int frameWidth;
+  int frameHeight;
+  int worldWidth;
+  int worldHeight;
+  unsigned currentFrame;
+  unsigned numberOfFrames;
+  unsigned frameInterval;
+  float timeSinceLastFrame;
+  int getDistance(const Sprite*) const;
+  bool moving;
+  bool stoping;
+  bool exploded;
+  Vector2f movePosition;
+};
+#endif

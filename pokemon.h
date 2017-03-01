@@ -1,0 +1,32 @@
+#ifndef POKEMON_H
+#define POKEMON_H
+#include <string>
+#include <vector>
+#include "drawable.h"
+#include "sprite.h"
+#include "explodingSprite.h"
+
+class Pokemon : public Sprite {
+public:
+   Pokemon(const std::string&);
+   Pokemon(const Pokemon&);
+   //Pokemon& operator=(const Pokemon&);
+   virtual ~Pokemon() {};
+   
+   virtual void draw() const;
+   virtual void update(Uint32 ticks,const Vector2f& playerPos);
+   
+   int getPoints() { return (power*10); }
+   bool hasBlown() { return exploded; }
+   
+   void moveRandom();
+   
+protected:
+   int power;
+   int runDist;
+   
+   //void advanceFrame(Uint32 ticks);
+   Pokemon& operator=(const Pokemon&);
+};
+
+#endif
